@@ -5,7 +5,7 @@
     --light: #F4F7FE;
     --dark: #14183E;
     --darkness: #003366;
-    --bright:  #1363c6;
+    --bright: #1363c6;
 }
 
 
@@ -304,15 +304,15 @@ h6,
 
 .carousel-control-prev,
 .carousel-control-next {
+    top: 50%;
     width: 4%;
     height: 50px;
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
     transform: translateY(-50%);
-    color: rgb(0, 0, 0);
-    text-align: center;
-    font-size: 24px;
+    background-color: #003366;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
 }
 
 .carousel-control-prev:hover,
@@ -321,11 +321,11 @@ h6,
 }
 
 .carousel-control-prev {
-    left: 5px;
+    left: 0px;
 }
 
 .carousel-control-next {
-    right: 5px;
+    right: 0px;
 }
 
 .history-container {
@@ -424,6 +424,7 @@ h6,
         text-align: center;
     }
 }
+
 /* End About Page Code */
 
 
@@ -516,7 +517,7 @@ h6,
 }
 
 .services-card-select.selected {
-    border: 2px solid  var(--bright);
+    border: 2px solid var(--bright);
     box-shadow: 0 4px 12px rgba(0, 86, 163, 0.3);
 }
 
@@ -544,7 +545,6 @@ h6,
 
 .card {
     margin-top: 20px;
-    background-color: var(--light) !important;
     border-radius: 0.5rem;
 }
 
@@ -567,6 +567,64 @@ h6,
 
 
 /* here is project page code start */
+.team-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(119, 118, 118, 0.2);
+}
+
+.card-img-top {
+    height: 250px;
+    object-fit: cover;
+}
+
+@media (max-width: 767.98px) {
+    .card-img-top {
+        height: 200px;
+    }
+}
+
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.carousel-inner>div {
+    display: none;
+}
+
+.carousel-inner>div.active {
+    display: block;
+}
+
+/* Ensuring visibility of only one slide on smaller screens */
+@media (max-width: 767.98px) {
+    .carousel-inner>div {
+        min-width: 100%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .carousel-inner>div {
+        min-width: 50%;
+    }
+}
+
+@media (min-width: 992px) {
+    .carousel-inner>div {
+        min-width: 33.33%;
+    }
+}
 
 
 

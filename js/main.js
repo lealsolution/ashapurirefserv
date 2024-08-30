@@ -87,35 +87,38 @@ document.querySelectorAll('.service-card').forEach(item => {
 });
 
 // about histroy js code
-        let slideIndex = 0;
-        const slides = document.querySelectorAll('.about-slide-frame');
-        let visibleSlides = 3; // Default value
+let slideIndex = 0;
+const slides = document.querySelectorAll('.about-slide-frame');
+let visibleSlides = 3; // Default value
 
-        function updateVisibleSlides() {
-            if (window.innerWidth <= 768) { // Mobile view
-                visibleSlides = 1;
-            } else if (window.innerWidth <= 992) { // Tablet view
-                visibleSlides = 2;
-            } else { // Desktop view
-                visibleSlides = 3;
-            }
-        }
+function updateVisibleSlides() {
+    if (window.innerWidth <= 768) { // Mobile view
+        visibleSlides = 1;
+    } else if (window.innerWidth <= 992) { // Tablet view
+        visibleSlides = 2;
+    } else { // Desktop view
+        visibleSlides = 3;
+    }
+}
 
-        function showSlides() {
-            updateVisibleSlides(); // Update the number of visible slides
-            // Hide all slides
-            slides.forEach((slide, index) => {
-                slide.style.display = (index >= slideIndex && index < slideIndex + visibleSlides) ? 'block' : 'none';
-            });
-        }
+function showSlides() {
+    updateVisibleSlides(); // Update the number of visible slides
+    // Hide all slides
+    slides.forEach((slide, index) => {
+        slide.style.display = (index >= slideIndex && index < slideIndex + visibleSlides) ? 'block' : 'none';
+    });
+}
 
-        function changeSlide(n) {
-            slideIndex = (slideIndex + n + slides.length) % slides.length;
-            showSlides();
-        }
+function changeSlide(n) {
+    slideIndex = (slideIndex + n + slides.length) % slides.length;
+    showSlides();
+}
 
-        // Initial call
-        showSlides();
+// Initial call
+showSlides();
 
-        // Update slides on window resize
-        window.addEventListener('resize', showSlides);
+// Update slides on window resize
+window.addEventListener('resize', showSlides);
+
+
+// project slider frame
