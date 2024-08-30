@@ -433,7 +433,7 @@ h6,
 .service-item {
     position: relative;
     padding: 45px 30px;
-    background: var(--light);
+    background: #ffff;
     transition: .5s;
 }
 
@@ -461,7 +461,7 @@ h6,
 
 .service-item:hover h5,
 .service-item:hover p {
-    background: var(--light);
+    color: white;
 }
 
 .service-item a.btn {
