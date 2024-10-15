@@ -136,6 +136,9 @@ h6,
     .navbar-brand img {
         width: 135px !important;
     }
+    .nav-marker {
+        padding: 0px 24px !important;
+    }
 }
 
 @media (max-width: 991.98px) {
@@ -785,12 +788,12 @@ h6,
 }
 
 .footer .copyright a {
-    color: #ff9900;
+    color: #ffffff;
     font-weight: 700;
 }
 
 .footer .copyright a:hover {
-    color: #FFFFFF;
+    color:  #ff9900;
 }
 
 .footer .footer-menu a {
