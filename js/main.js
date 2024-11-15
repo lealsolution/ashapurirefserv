@@ -121,4 +121,26 @@ showSlides();
 window.addEventListener('resize', showSlides);
 
 
-// project slider frame
+
+document.getElementById('viewMoreBtn').addEventListener('click', function() {
+    const moreCards = document.querySelectorAll('.more-cards');
+    moreCards.forEach(card => {
+        card.classList.remove('d-none'); // Show hidden cards
+    });
+
+    this.classList.add('d-none'); // Hide the "View More" button
+    document.getElementById('viewLessBtn').classList.remove('d-none'); // Show the "View Less" button
+});
+
+document.getElementById('viewLessBtn').addEventListener('click', function() {
+    const moreCards = document.querySelectorAll('.more-cards');
+    moreCards.forEach(card => {
+        card.classList.add('d-none'); // Hide additional cards
+    });
+
+    this.classList.add('d-none'); // Hide the "View Less" button
+    document.getElementById('viewMoreBtn').classList.remove('d-none'); // Show the "View More" button
+
+    // Optional: Scroll back to the top of the main start div
+    document.getElementById('mainStart').scrollIntoView({ behavior: 'smooth' });
+});

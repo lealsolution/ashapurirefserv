@@ -129,18 +129,15 @@ h6,
     cursor: pointer;
     border-radius: 10px;
 }
-
 .text-white-nav {
     font-size: 24px;
 }
-
 @media (max-width: 420px) {
-    .text-white-nav {
-        display: none;
-    }
-
     .navbar-brand img {
         width: 135px !important;
+    }
+    .nav-marker {
+        padding: 0px 24px !important;
     }
 }
 
@@ -350,6 +347,10 @@ h6,
         width: calc(100% - 20px);
         /* Adjust width with margin */
     }
+    .carousel-control-next,
+    .carousel-control-prev {
+        width: 26px; /* Adjust width for mobile devices */
+    }
 }
 
 @media (min-width: 769px) and (max-width: 992px) {
@@ -524,6 +525,7 @@ h6,
 .btn-view-services {
     color: var(--light) !important;
     background-color: var(--bright);
+    font-size: 15px;
     padding: 10px;
 }
 
@@ -545,6 +547,7 @@ h6,
 
 .card {
     margin-top: 20px;
+    padding-top: 20px;
     border-radius: 0.5rem;
 }
 
@@ -587,77 +590,8 @@ h6,
     }
 }
 
-.carousel-container {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-}
+/* project page code end */
 
-.carousel-inner {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-    width: 100%;
-}
-
-.carousel-inner>div {
-    display: none;
-}
-
-.carousel-inner>div.active {
-    display: block;
-}
-
-/* Ensuring visibility of only one slide on smaller screens */
-@media (max-width: 767.98px) {
-    .carousel-inner>div {
-        min-width: 100%;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 991.98px) {
-    .carousel-inner>div {
-        min-width: 50%;
-    }
-}
-
-@media (min-width: 992px) {
-    .carousel-inner>div {
-        min-width: 33.33%;
-    }
-}
-
-
-
-
-
-
-/*** Newsletter ***/
-.newsletter {
-    background: url(../img/bg-hero.png) center center no-repeat;
-    background-size: cover;
-}
-
-@media (min-width: 992px) {
-    .newsletter .container {
-        max-width: 100% !important;
-    }
-
-    .newsletter .newsletter-text {
-        padding-right: calc(((100% - 960px) / 2) + .75rem);
-    }
-}
-
-@media (min-width: 1200px) {
-    .newsletter .newsletter-text {
-        padding-right: calc(((100% - 1140px) / 2) + .75rem);
-    }
-}
-
-@media (min-width: 1400px) {
-    .newsletter .newsletter-text {
-        padding-right: calc(((100% - 1320px) / 2) + .75rem);
-    }
-}
 
 
 /*** Case Study ***/
@@ -848,18 +782,18 @@ h6,
 }
 
 .footer .copyright {
-    padding: 25px 75px;
+    padding: 25px 0px;
     font-size: 14px;
     border-top: 1px solid rgba(256, 256, 256, .1);
 }
 
 .footer .copyright a {
-    color: #ff9900;
+    color: #ffffff;
     font-weight: 700;
 }
 
 .footer .copyright a:hover {
-    color: #FFFFFF;
+    color:  #ff9900;
 }
 
 .footer .footer-menu a {
@@ -876,8 +810,4 @@ h6,
 
 .bg-dark {
     background-color: #08244f !important;
-}
-
-.footer-bottom-in {
-    background-color: #03193a !important;
 }
