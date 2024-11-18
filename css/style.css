@@ -6,6 +6,11 @@
     --dark: #14183E;
     --darkness: #003366;
     --bright: #1363c6;
+    --main-font: 'Montserrat', sans-serif;
+}
+
+body {
+    font-family: var(--main-font);
 }
 
 
@@ -232,6 +237,12 @@ h6,
     left: 3px;
 }
 
+.section-line {
+    width: 100px;
+    height: 4px;
+    background-color: #007bff;
+    margin: 10px auto 30px;
+}
 
 /*** Start About Page Code***/
 .about-list-item {
@@ -499,7 +510,7 @@ h6,
 /*  */
 .service-card {
     border: 2px solid transparent;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     height: 170px;
     margin: 10px 5px;
     align-items: start;
@@ -546,10 +557,13 @@ h6,
 }
 
 .card {
-    margin-top: 20px;
-    padding-top: 20px;
+    /* margin-top: 20px;
+    padding-top: 20px; */
     border-radius: 0.5rem;
 }
+/* .card.service-card.text-center.services-card-select {
+    width: 100%;
+} */
 
 /*  */
 .custom-bullet {
@@ -591,6 +605,55 @@ h6,
 }
 
 /* project page code end */
+
+/* code for gallary page */
+.gallery-item {
+    overflow: hidden;
+    position: relative;
+    margin: 10px 0;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.gallery-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+    opacity: 1;
+}
+
+/* Responsive Styles */
+@media (max-width: 767.98px) {
+    .gallery-item img {
+        height: auto;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .gallery-item img {
+        height: auto;
+    }
+}
 
 
 
