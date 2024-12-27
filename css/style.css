@@ -129,7 +129,6 @@ h6,
 
 .navbar-brand img {
     width: 70%;
-    padding: 2%;
     text-align: center;
     cursor: pointer;
     border-radius: 10px;
@@ -186,15 +185,21 @@ h6,
     margin-top: -75px;
     background: url(../img/bg-hero.png) center center no-repeat;
     background-size: cover;
-    height: 100vh;
 }
 
 .hero-header .breadcrumb-item+.breadcrumb-item::before {
     color: var(--light);
 }
 
+.hero-header-home {
+    margin-top: -75px;
+    background: url(../img/bg-hero.png) center center no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
 @media (max-width: 420px) {
-    .hero-header {
+    .hero-header-home {
         height: auto;
         padding-bottom: 20px;
     }
@@ -283,12 +288,11 @@ h6,
 }
 
 .about-card-img {
-    width: 77%;
-    padding: 5px;
+    width: 63%;
+    padding: 10px 25px 15px 25px;
     border: 8px solid #003366;
     border-top-left-radius: 25px;
     border-bottom-right-radius: 25px;
-    height: 350px;
 }
 
 .about-feature {
@@ -367,27 +371,30 @@ h6,
 @media (max-width: 768px) {
     .about-slide-frame {
         width: calc(100% - 20px);
-        /* Adjust width with margin */
     }
 
     .carousel-control-next,
     .carousel-control-prev {
         width: 26px;
-        /* Adjust width for mobile devices */
+    }
+    .about-card-img {
+        width: 90%;
+        padding: 10px 25px 15px 25px;
+        border: 8px solid #003366;
+        border-top-left-radius: 25px;
+        border-bottom-right-radius: 25px;
     }
 }
 
 @media (min-width: 769px) and (max-width: 992px) {
     .about-slide-frame {
         width: calc(50% - 20px);
-        /* Adjust width with margin */
     }
 }
 
 @media (min-width: 993px) {
     .about-slide-frame {
         width: calc(33.33% - 20px);
-        /* Adjust width with margin */
     }
 }
 
@@ -520,6 +527,10 @@ h6,
     background: var(--light);
 }
 
+.services-card-title {
+    font-size: 20px;
+}
+
 
 /*  */
 .service-card {
@@ -587,7 +598,6 @@ h6,
     padding-left: 25px;
     margin-bottom: 15px;
 }
-
 /* End Service Code Page */
 
 
@@ -601,68 +611,20 @@ h6,
     box-shadow: 0 10px 20px rgba(119, 118, 118, 0.2);
 }
 
-.card-img-top {
-    height: 250px;
+.product-card {
+    height: 300px;
     object-fit: cover;
 }
 
 @media (max-width: 767.98px) {
-    .card-img-top {
+    .product-card {
         height: 200px;
     }
+    .services-card-title {
+        font-size: 16px;
+    }
 }
-
 /* project page code end */
-
-/* code for gallary page */
-.gallery-item {
-    overflow: hidden;
-    position: relative;
-    margin: 10px 0;
-}
-
-.gallery-item img {
-    width: 100%;
-    height: 100%;
-    transition: transform 0.3s ease;
-}
-
-.gallery-item:hover img {
-    transform: scale(1.1);
-}
-
-.gallery-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.gallery-item:hover .gallery-overlay {
-    opacity: 1;
-}
-
-/* Responsive Styles */
-@media (max-width: 767.98px) {
-    .gallery-item img {
-        height: auto;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 991.98px) {
-    .gallery-item img {
-        height: auto;
-    }
-}
-
 
 
 /*** Case Study ***/
@@ -864,7 +826,7 @@ h6,
 }
 
 .footer .copyright a:hover {
-    color: #ff9900;
+    color: #a8a8a8;
 }
 
 .footer .footer-menu a {
